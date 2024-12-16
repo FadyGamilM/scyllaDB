@@ -25,4 +25,13 @@ just leanring new distirbuted databsae which is scyllaDB
 ### Replication Facotr in ScyllaDB:
 ![alt text](image-2.png)
 
+### Consistency levels at ScyllaDB ? 
+- `CL` is how many nodes must respond on the write operations to ACK  the operation
+- `CL = 1` means only one node
+- `CL = QUORUM` means the majority of the nodes
+- `CL = ALL` means all nodes
+- we can configure this per operation (tuning per operation)
 
+For the following example, the CL is set to QUORUM, so for a RF = 3, so each partition is replicated 3 times, so every write operation required 2 out of 3 nodes to be ACKed
+
+![alt text](image-3.png)
